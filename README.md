@@ -354,7 +354,7 @@ The interactive viewer (`gsplat_viewer/`) is based on [limacv/GaussianSplattingV
 If you use this work, please cite:
 
 ```bibtex
-@inproceedings{ozyagli2026gaussian,
+@inproceedings{ozuyagli2026gaussian,
   title     = {Camera-Trajectory-Driven Signed Distance Fields for Automated Object Isolation},
   author    = {Özyağlı, Ömer Faruk and Demirbaş, Emre and Nar, Fatih},
   booktitle = {IEEE International Conference on Automation, Robotics and Applications (ICARA)},
