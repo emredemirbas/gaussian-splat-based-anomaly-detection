@@ -7,7 +7,7 @@
 > Department of Computer Engineering, Ankara Yıldırım Beyazıt University
 > IEEE ICARA 2026 — DOI: [10.1109/ICARA69401.2026.11480350](https://doi.org/10.1109/ICARA69401.2026.11480350)
 
-📄 **[Poster (PDF)](docs/poster.pdf)** · 🎨 **[Interactive Pipeline Diagram](docs/pipeline-render.html)**
+📄 **[Poster (PDF)](docs/poster.pdf)**
 
 ---
 
@@ -45,7 +45,7 @@ To rigorously evaluate the CFAR thresholding and spatial clustering without the 
 
 ## System Architecture
 
-The pipeline runs in three stages. An interactive version of this diagram lives at [`docs/pipeline-render.html`](docs/pipeline-render.html).
+The pipeline runs in three stages.
 
 ```
 INPUT                  STAGE 1 — Object Isolation
@@ -159,7 +159,7 @@ G = \tfrac{1}{n}\,Z_{c}^{\!\top}Z_{c} + \varepsilon I,\quad \varepsilon = 10^{-6
 $$
 
 $$
-\delta(x^{\!\ast}) = z^{\!\ast\top}\,G^{-1}\,z^{\!\ast}
+\delta(x^{\ast}) = z^{\ast\top}\,G^{-1}\,z^{\ast}
 $$
 
 #### 3.4 CFAR Threshold & DBSCAN Clustering
