@@ -81,7 +81,7 @@ Raw COLMAP camera centres are smoothed by minimising a curvature-penalised least
 $$
 \hat{p} = \arg\min_{X}\; \lVert X - P \rVert^{2} \;+\; \lambda\,\lVert D X \rVert^{2}
 \quad\Longrightarrow\quad
-(I + \lambda\,D^{\top} D)\,\hat{p} = P,\;\;\lambda = 10^{7}
+(I + \lambda\,D^{\!\top}\!D)\,\hat{p} = P,\;\;\lambda = 10^{7}
 $$
 
 Solved independently per axis. The smoothed centres form the **anchor set**.
@@ -91,7 +91,7 @@ Solved independently per axis. The smoothed centres form the **anchor set**.
 Scene points are rotated into the trajectory's principal frame. An inflated ellipsoid (×1.5 radii, 95th-percentile extent) coarsely gates background:
 
 $$
-C = \tfrac{1}{N}(X-\mu)^{\top}(X-\mu) = V\,\Lambda\,V^{\top}
+C = \tfrac{1}{N}(X-\mu)^{\!\top}(X-\mu) = V\,\Lambda\,V^{\!\top}
 $$
 
 $$
@@ -103,7 +103,7 @@ $$
 RANSAC removes the ground plane (1 000 iterations, inlier distance 0.1 m). A radial-basis SDF envelopes the structure; each anchor contributes three labelled samples ($-1$ inside, $0$ on surface, $+1$ outside):
 
 $$
-K_{ij} = \exp\left(-\frac{\lVert \tilde{x}_i - \tilde{x}_j\rVert^{2}}{2\sigma^{2}}\right),\quad \sigma = 20
+K_{ij} = \exp\!\left(-\frac{\lVert \tilde{x}_i - \tilde{x}_j\rVert^{2}}{2\sigma^{2}}\right),\quad \sigma = 20
 $$
 
 $$
@@ -123,7 +123,7 @@ $$
 $$
 
 $$
-\text{Scale:}\quad \text{keep } q_j \iff \max\big(\exp(\mathrm{scale}_k)\big) < 0.5
+\text{Scale:}\quad \text{keep } q_j \iff \max\!\big(\exp(\mathrm{scale}_k)\big) < 0.5
 $$
 
 ### Stage 3 — Automated Anomaly Detection
@@ -148,26 +148,26 @@ $$
 z(x) = \frac{1}{\sqrt{D}}\,\big[\cos(\Omega x),\,\sin(\Omega x)\big] \in \mathbb{R}^{600}
 $$
 
-This approximates $K(x,y) = \exp\big(-\lVert x-y\rVert^{2}/2\sigma^{2}\big)$ with $\mathcal{O}(nD)$ complexity.
+This approximates $K(x,y) = \exp\!\big(-\lVert x-y\rVert^{2}/2\sigma^{2}\big)$ with $\mathcal{O}(nD)$ complexity.
 
 #### 3.3 Randomised RX Anomaly Score
 
 The Mahalanobis distance in RFF space measures how far each splat deviates from the background covariance:
 
 $$
-G = \tfrac{1}{n}\,Z_{c}^{\top} Z_{c} + \varepsilon I,\quad \varepsilon = 10^{-6}
+G = \tfrac{1}{n}\,Z_{c}^{\!\top}Z_{c} + \varepsilon I,\quad \varepsilon = 10^{-6}
 $$
 
 $$
-\delta(x^{*}) = (z^{*})^{\top}\,G^{-1}\,z^{*}
+\delta(x^{\!*}) = z^{\!*\top}\,G^{-1}\,z^{\!*}
 $$
 
 #### 3.4 CFAR Threshold & DBSCAN Clustering
 
-The best-fit distribution over $\{\Gamma,\;\log\mathcal{N},\;\chi^{2},\;\text{Weibull},\;\text{Nakagami},\,\ldots\}$ is selected by the Kolmogorov–Smirnov test. The CFAR threshold controls the false-alarm rate exactly:
+The best-fit distribution over $\{\Gamma,\;\log\!\mathcal{N},\;\chi^{2},\;\text{Weibull},\;\text{Nakagami},\,\ldots\}$ is selected by the Kolmogorov–Smirnov test. The CFAR threshold controls the false-alarm rate exactly:
 
 $$
-\tau = F^{-1}\big(1 - P_\text{fa}\big),\quad P_\text{fa} = 0.01
+\tau = F^{-1}\!\big(1 - P_\text{fa}\big),\quad P_\text{fa} = 0.01
 $$
 
 $$
