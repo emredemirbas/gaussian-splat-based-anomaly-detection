@@ -159,7 +159,7 @@ G = \tfrac{1}{n}\,Z_{c}^{\!\top}Z_{c} + \varepsilon I,\quad \varepsilon = 10^{-6
 $$
 
 $$
-\delta(x^{\!*}) = z^{\!*\top}\,G^{-1}\,z^{\!*}
+\delta(x^{\!\ast}) = z^{\!\ast\top}\,G^{-1}\,z^{\!\ast}
 $$
 
 #### 3.4 CFAR Threshold & DBSCAN Clustering
