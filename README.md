@@ -29,7 +29,7 @@ Real-world evaluation on a light-pole inspection scene:
 
 | (a) Raw drone capture | (b) Isolated reconstruction | (c) Anomaly overlay |
 |:---:|:---:|:---:|
-| ![Raw scene](figures/results_light_pole/results_a.png) | ![Isolated](figures/results_light_pole/results_b.png) | ![Anomalies](figures/results_light_pole/results_c.png) |
+| ![Raw scene](figures/results_a.png) | ![Isolated](figures/results_b.png) | ![Anomalies](figures/results_c.png) |
 | Background clutter (ground markings, buildings) dominates the raw 3DGS volume. | Lamp pole and fixtures cleanly separated after Stages 1–2, **without semantic supervision**. | RRX + CFAR ($P_\text{fa}=0.01$) flags the defect cluster; DBSCAN groups anomalous Gaussians into spatially coherent regions. |
 
 ### Synthetic Defect Clustering
