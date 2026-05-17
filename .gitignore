@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Real data (too large for GitHub — host externally)
+src/data/real/
+
+# Design source files (not needed in repo — final assets are in docs/ and figures/)
+design/
+
+# Viewer state
+imgui.ini
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Claude
+.claude/
